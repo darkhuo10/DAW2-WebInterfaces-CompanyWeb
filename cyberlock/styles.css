@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url(img/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+main{
+    color: #8CC8EE;
+    border: 2px solid #8CC8EE;
+    border-radius: 2px;
+    margin: 50px;
+    padding: 20px 40px;
+    background-color: rgba(0, 9, 52, 0.8);
+    display: grid;
+    gap: 1.8em;
+    
+}
+.about{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "auaside aumain aumain aumain aumain"
+        "footer footer footer footer footer";
+}
+.clases{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "comain comain comain comain comain"
+        "footer footer footer footer footer";
+}
+.contact{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "contacto contacto contacto contacto contacto"
+        "footer footer footer footer footer";
+}
+.index{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "slider slider slider slider slider"
+        "footer footer footer footer footer";
+}
+.services{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "sgmain sgmain sgmain sgmain sgmain"        
+        "footer footer footer footer footer";
+}
+.ciber{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "scmain scmain scmain scmain scmain"
+        "footer footer footer footer footer";
+}
+.formacion{
+    grid-template-areas:
+        "header header header header header"
+        "menu menu menu menu menu"
+        "sfmain sfmain sfmain sfmain sfmain"
+        "footer footer footer footer footer";
+}
+
+
+
+h1{
+    border-radius: 2rem;
+    padding: 20px;
+    text-align: center;
+    font-size: 3em;
+    color: #8CC8EE;
+    background-color: #000934;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+    color: #8CC8EE;
+}
+
+
+
+p{
+    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header, footer{
+    border: 2px solid #8CC8EE;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #8CC8EE;
+    background-color: #000934;
+}
+
+#header{
+    margin: 20px 50px;
+    grid-area: header;
+}
+#footer{
+    margin: 20px 50px;
+    grid-area: footer;
+}
+#au-main {
+    color: #8CC8EE;
+    border: 2px solid #8CC8EE;
+    border-radius: 2px;
+    margin: 50px 5px;
+    padding: 20px 40px;
+    background-color: #000934;
+    text-align: justify;
+    grid-area: aumain;
+}
+
+#au-aside {
+    height: fit-content;
+    border: 2px solid #000934;
+    border-radius: 2px;
+    margin: 50px 0;
+    padding: 20px 40px;
+    background-color: #8CC8EE;
+    color: #000934;
+    display: block;
+    grid-area: auaside;
+}
+#aside-links{
+    list-style: none;
+}
+
+#menu {
+    grid-area: menu;
+    width:75%;
+    margin:auto;
+    color: #8CC8EE;
+    
+}
+nav {
+	margin: 10px auto;
+    font-size: 1.5em;
+    background-color: #8CC8EE;
+    border-radius: 2px;
+    border: 2px solid #000934;
+    width: fit-content;
+    
+}
+
+nav ul {
+	list-style:none;
+	padding:0;
+	overflow:hidden;
+    border: 1px solid #8CC8EE;
+}
+
+nav > ul > li {
+    float:left;
+}
+
+a {
+	text-decoration:none;
+	color:#000934;
+	display:block;
+	padding:10px 20px;
+}
+
+a:hover {
+	background:#000934;
+    color: #8CC8EE;
+    border: 2px solid #8CC8EE;
+    padding: 8px 18px;
+}
+
+li:hover div {display:table;}
+
+.menu-items {
+	width:fit-content;
+	position: absolute;
+	background:#8CC8EE;
+	box-sizing:border-box;
+	display:none;
+    z-index: 1;
+}
+
+.submenu-element-group{
+	display:table-cell;
+	border-right:2px solid #000934;
+	box-sizing:border-box;
+}
+
+.submenu-element-group:last-child {border-right:none;}
+.submenu-element-group:first-child {border-left:none;}
+.submenu-title-a:hover {background:none;}
+.submenu-link {color: #000934;}
+.submenu-title-a{
+	color:#8CC8EE;
+	padding:10px 20px;
+}
+
+.titulo {background:#000934;}
+
+
+
+.slider-box {
+    width: 800px;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+    grid-area: slider;
+
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+
+.slider-box img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+    
+    30% {margin-left: -100%;}
+    55% {margin-left: -100%;}
+    
+    60% {margin-left: -200%;}
+    85% {margin-left: -200%;}
+    
+    90% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+.slider-box:hover ul {
+    animation-play-state: paused; 
+}
+
+#contacto {
+    margin: 50px 20px;
+    grid-area: contacto;   
+}
+
+#c-direccion {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+#c-direccion >img {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+#contacto >p {
+    text-align: justify;
+    width: fit-content;
+    margin: 2px;
+    height: fit-content;
+    border-radius: 2px;
+    background-color: #8CC8EE;
+    color: #000934;
+    display: inline-block;
+}
+
+#sg-main {
+    text-align: center;
+    grid-area: sgmain;
+}
+
+#sitemap, .sm-1, .sm-2, .sm-3{
+    display: inline-block;
+    color: #8CC8EE;
+    width: fit-content;
+    background: none;  
+}
+
+#sitemap:hover, .sm-1:hover, .sm-2:hover, .sm-3:hover{
+    color: red;
+    background: none;
+    border: none;
+    padding:10px 20px;
+}
+
+footer > p:first-of-type {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sf-main {
+    text-align: center;
+    grid-area: sfmain;
+}
+#sc-main {
+    text-align: center;
+    grid-area: scmain;
+}
+.s-img {
+    width: 50%;
+    height: auto;
+    margin: 5px;
+}
+
+#co-main{
+    text-align: center;
+    grid-area: comain;
+}
+
+#sm-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sm-1{
+    font-size: 2.5rem;
+}
+.sm-2{
+    font-size: 2rem;
+}
+.sm-3{font-size: 1.5rem;}
